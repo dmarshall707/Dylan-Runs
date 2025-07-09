@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dylan Runs</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdf9f3;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0.5rem 0 2rem 0;
+    }
+
+    .gear-section {
+      background: #f3e9d7;
+      border-radius: 999px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gear-icon {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .dropdown-content {
+      display: none;
+      background-color: #fff;
+      margin: -0.5rem 0 1.5rem 0;
+      padding: 0.5rem 1rem 1rem 3rem;
+      border-left: 3px solid #ccc;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      margin: 0.3rem 0;
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <!-- Stick figure runner -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5a1 1 0 11-2 0 1 1 0 012 0zm-1 2v3l-2 2 1 4m4-4l-2-2m2 2l2 5m-5-5l-2 5" />
+    </svg>
+    <h1>Dylan Runs</h1>
+  </div>
+
+  <!-- Gear Sections -->
+  <div class="dropdown">
+    <div class="gear-section" onclick="toggleDropdown(this)">
+      <div class="gear-icon">
+        <!-- Sunglasses Icon -->
+        <svg width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M3 10h2l2 6h2l2-6h2l2 6h2l2-6h2v2h-1l-2 6h-3l-2-6h-2l-2 6H6l-2-6H3v-2z"/></svg>
+        <span>SUNGLASSES</span>
+      </div>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Sunglasses Link 1</a>
+      <a href="#">Sunglasses Link 2</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="gear-section" onclick="toggleDropdown(this)">
+      <div class="gear-icon">
+        <!-- Headphones Icon -->
+        <svg width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0116 0v6a2 2 0 01-2 2h-1v-6h1v-2a6 6 0 00-12 0v2h1v6H6a2 2 0 01-2-2v-6z"/></svg>
+        <span>HEADPHONES</span>
+      </div>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Headphones Link 1</a>
+      <a href="#">Headphones Link 2</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="gear-section" onclick="toggleDropdown(this)">
+      <div class="gear-icon">
+        <!-- Shorts Icon -->
+        <svg width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M5 4h14l-1 7h-4v4h-4v-4H6L5 4z"/></svg>
+        <span>SHORTS</span>
+      </div>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Shorts Link 1</a>
+      <a href="#">Shorts Link 2</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="gear-section" onclick="toggleDropdown(this)">
+      <div class="gear-icon">
+        <!-- Shoes Icon -->
+        <svg width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M2 17v-1l6-2 2 2h10v2H2z"/></svg>
+        <span>SHOES</span>
+      </div>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Shoes Link 1</a>
+      <a href="#">Shoes Link 2</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="gear-section" onclick="toggleDropdown(this)">
+      <div class="gear-icon">
+        <!-- Socks Icon -->
+        <svg width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M6 2h4v6h-4V2zm8 2h4v6h-4V4zm-7 8h3l-1 8H6l1-8zm8 0h3l-1 8h-2l1-8z"/></svg>
+        <span>SOCKS</span>
+      </div>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Socks Link 1</a>
+      <a href="#">Socks Link 2</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(el) {
+      const parent = el.parentElement;
+      parent.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
